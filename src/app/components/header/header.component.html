@@ -1,0 +1,35 @@
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+  <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+    <span class="fs-4 ms-3">Angular Homeworks</span>
+  </div>
+
+<!--  <ul class="nav nav-pills">-->
+<!--    <li class="nav-item">-->
+<!--      <a (click)="onSelect(PAGES.Home)" class="nav-link active" aria-current="page">Home</a>-->
+<!--    </li>-->
+<!--    <li class="nav-item">-->
+<!--      <a (click)="onSelect(PAGES.Users)" class="nav-link">Users</a>-->
+<!--    </li>-->
+<!--    <li class="nav-item">-->
+<!--      <a (click)="onSelect(PAGES.TodoList)" class="nav-link">Todos</a>-->
+<!--    </li>-->
+<!--  </ul>-->
+
+  <ul class="nav nav-pills" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button (click)="onSelect(PAGES.Home)" class="nav-link" type="button" [ngClass]="{ active: selectedPage === PAGES.Home }">
+        Home
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button (click)="onSelect(PAGES.Users)" class="nav-link" type="button" [ngClass]="{ active: selectedPage === PAGES.Users }">
+        Users
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button (click)="onSelect(PAGES.TodoList)" class="nav-link" type="button" [ngClass]="{ active: selectedPage === PAGES.TodoList }">
+        Todo List
+      </button>
+    </li>
+  </ul>
+</header>

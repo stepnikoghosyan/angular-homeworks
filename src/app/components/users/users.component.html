@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 class="text-center">Users</h1>
+
+  <div class="container">
+    <div class="list-group">
+      <button *ngFor="let user of usersList.getValues()" (click)="toggleRow(user.id)" type="button" class="list-group-item list-group-item-action">
+        {{ user.id }} - {{ user.name }}, Total todo items: {{ user.todoList.getValues().length }}
+
+        <div *ngIf="!!expandedItems[user.id]" class="container">
+          <app-todo-list [todoList]="user.todoList"></app-todo-list>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>

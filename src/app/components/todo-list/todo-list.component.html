@@ -1,0 +1,13 @@
+<div class="container">
+  <h2 class="text-center">Todo List</h2>
+
+  <div class="container">
+    <ul *ngIf="!!todoList && todoList.getValues().length" class="list-group">
+      <li *ngFor="let todo of todoList.getValues()" class="list-group-item">
+        {{ todo.id }} - {{ todo.title }}
+      </li>
+    </ul>
+
+    <p *ngIf="!!todoList && !todoList.getValues().length" class="text-center">No items</p>
+  </div>
+</div>
